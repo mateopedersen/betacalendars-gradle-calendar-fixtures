@@ -1,0 +1,25 @@
+import java.time.DayOfWeek
+import com.betacalendars.gradle.calendarfixtures.model.CalendarOutputFormat
+
+plugins {
+    id 'com.betacalendars.calendar-fixtures'
+}
+
+calendarFixtures {
+    calendars {
+        create('sundayFirst') {
+            year.set(2027)
+            firstDayOfWeek.set(DayOfWeek.SUNDAY)
+            fixedRows.set(false)
+            includeOverflowDays.set(false)
+            formats.set([CalendarOutputFormat.JSON, CalendarOutputFormat.CSV])
+        }
+    }
+    ranges {
+        create('releaseWindow') {
+            from.set("2026-12-15")
+            to.set("2027-01-15")
+            firstDayOfWeek.set(DayOfWeek.SUNDAY)
+        }
+    }
+}
