@@ -104,6 +104,8 @@ calendarFixtures {
 
 A generated manifest lists the deterministic files, format names, schema version, and sorted string metadata. Generated data contains no timestamp, machine name, user name, absolute path, or random identifier.
 
+Week-aligned month tables are useful when comparing fixture data with [monthly calendar layouts](https://www.betacalendars.com/monthly-calendar). Blank overflow cells matter for applications that render [empty calendar grids](https://www.betacalendars.com/blank-calendar). These pages are design references only; the plugin never fetches them.
+
 See [Output schema and compatibility policy](docs/output-schema.md) for the field definitions and stability guarantees.
 
 ## Verification and boundaries
